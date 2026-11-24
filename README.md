@@ -11,6 +11,29 @@ El proyecto produce dos cosas:
 
 > **Advertencia:** los datos semilla (obras y relaciones) son **ilustrativos** y están marcados "EJEMPLO – verificar". No son resultados de investigación. La obra `plantilla-articulo` solo muestra el formato.
 
+## Empieza aquí
+
+Elige el perfil que más se parezca al tuyo.
+
+### Investigador/a o anotador/a (sin programar)
+
+1. Lee el [manual de anotación](docs/manual-anotacion.md).
+2. Abre los CSV de [data/](data/) con LibreOffice. Al guardar, elige "CSV (UTF-8), separado por comas".
+3. Añade filas siguiendo los [vocabularios controlados](data/vocabularios/) (ver [Añadir una obra o una relación](#añadir-una-obra-o-una-relación)).
+4. Pide a alguien del equipo que ejecute la validación, o revisa el resultado de la comprobación automática en la pestaña Actions de GitHub (GitHub Actions).
+
+### Desarrollador/a
+
+1. Sigue la [Instalación](#instalación).
+2. Valida los datos y construye el grafo como indica el [Flujo de trabajo](#flujo-de-trabajo).
+3. Ejecuta las pruebas con `.venv/bin/python -m pytest`.
+4. Lee [docs/decisiones-modelo.md](docs/decisiones-modelo.md) para entender el diseño.
+
+### Solo quiero ver resultados
+
+1. Construye el grafo siguiendo la [Instalación](#instalación) y el [Flujo de trabajo](#flujo-de-trabajo).
+2. Abre `salidas/grafo.html` en el navegador, o `salidas/grafo.gexf` en Gephi.
+
 ## Modelo híbrido
 
 1. Capa principal: tablas CSV ([data/obras.csv](data/obras.csv), [data/relaciones.csv](data/relaciones.csv)), editables en LibreOffice o Excel.
