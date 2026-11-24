@@ -9,6 +9,10 @@ El proyecto produce dos cosas:
 - **Un grafo** de relaciones intertextuales, que se puede explorar en el navegador o analizar en Gephi.
 - **Un método replicable** de anotación (tablas, vocabularios controlados y validación automática) que sirve también para otros relatos.
 
+![Grafo de ejemplo: el Génesis 4 en el centro, rodeado de las obras que lo citan, comentan o reescriben, y de los motivos que cada obra retoma](docs/img/grafo-ejemplo.png)
+
+*Grafo generado con `scripts/construir_grafo.py --incluir-motivos` a partir de los datos de ejemplo. Los círculos son obras, coloreadas por tipo; los rombos amarillos son motivos. Las flechas rojas son relaciones literarias, las azules académicas y las grises enlazan una obra con sus motivos. Las líneas discontinuas indican certeza baja.*
+
 > **Advertencia:** los datos semilla (obras y relaciones) son **ilustrativos** y están marcados "EJEMPLO – verificar". No son resultados de investigación. La obra `plantilla-articulo` solo muestra el formato.
 
 ## Empieza aquí
@@ -165,6 +169,19 @@ Ver el paso a paso en [docs/manual-anotacion.md](docs/manual-anotacion.md). Resu
 2. Cambia la fuente: nueva fila en [obras.csv](data/obras.csv) (tipo `fuente_biblica` u otro) y, si procede, su TEI en [tei/textos/](tei/textos/).
 3. Vacía [obras.csv](data/obras.csv) y [relaciones.csv](data/relaciones.csv) y anota el nuevo corpus siguiendo [docs/metodologia.md](docs/metodologia.md).
 4. Ajusta las localizaciones (`loc_destino`) al sistema de citación de la nueva fuente.
+
+## Cómo contribuir
+
+1. Crea una rama por cada tanda de anotación, por ejemplo `anotacion/byron`.
+2. Edita los CSV de [data/](data/) siguiendo el [manual de anotación](docs/manual-anotacion.md).
+3. Ejecuta la validación (ver [Flujo de trabajo](#flujo-de-trabajo)).
+4. Abre un pull request en GitHub.
+5. Otra persona revisa las anotaciones según el manual, con especial atención a la certeza y la evidencia.
+6. La validación automática (GitHub Actions) debe pasar antes de fusionar.
+
+Los cambios en los vocabularios o en el esquema afectan al método y a su replicabilidad: discútelos primero en un issue y registra la decisión en [docs/decisiones-modelo.md](docs/decisiones-modelo.md).
+
+Si no usas git, puedes editar los CSV directamente en la web de GitHub (botón del lápiz) y proponer el cambio como pull request.
 
 ## Glosario
 
