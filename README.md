@@ -34,6 +34,32 @@ Elige el perfil que más se parezca al tuyo.
 1. Construye el grafo siguiendo la [Instalación](#instalación) y el [Flujo de trabajo](#flujo-de-trabajo).
 2. Abre `salidas/grafo.html` en el navegador, o `salidas/grafo.gexf` en Gephi.
 
+## Un ejemplo
+
+Un **nodo** es una obra: una fila de [data/obras.csv](data/obras.csv). Una **arista** es una relación entre dos obras: una fila de [data/relaciones.csv](data/relaciones.csv), dirigida desde el texto de origen (el que retoma) hacia el texto de destino (el retomado). Esta es una fila real de `relaciones.csv`:
+
+```csv
+r0009,steinbeck-east-of-eden-1952,genesis-4,cita,,Gen.4.7,timshel,m_pecado_acecha,alta,,anotadorA,2026-11-24,EJEMPLO – verificar
+```
+
+| Columna | Valor | Qué significa |
+|---|---|---|
+| `id` | `r0009` | Identificador único de la relación. |
+| `origen` | `steinbeck-east-of-eden-1952` | Id de la obra que retoma el relato (*East of Eden*, de John Steinbeck, 1952), tal como figura en `obras.csv`. |
+| `destino` | `genesis-4` | Id de la obra retomada (Génesis 4, Caín y Abel). |
+| `tipo_relacion` | `cita` | Tipo de relación, del vocabulario [tipos_relacion.csv](data/vocabularios/tipos_relacion.csv): reproducción literal y reconocible de un fragmento del destino. |
+| `loc_origen` | (vacío) | Dónde aparece en la obra de origen (capítulo o página). Opcional. |
+| `loc_destino` | `Gen.4.7` | Pasaje del destino, en formato OSIS: Génesis, capítulo 4, versículo 7. |
+| `evidencia` | `timshel` | Fragmento o descripción breve que respalda la relación. |
+| `motivos` | `m_pecado_acecha` | Motivo del vocabulario [motivos.csv](data/vocabularios/motivos.csv): "El pecado acecha" (incluye el tema de *timshel*). |
+| `certeza` | `alta` | Confianza en la relación (`alta`, `media` o `baja`): aquí es explícita. |
+| `mediada_por` | (vacío) | Id de una obra intermediaria, si la hubo. Opcional. |
+| `anotador` | `anotadorA` | Quién registró la relación. |
+| `fecha` | `2026-11-24` | Fecha de la anotación. |
+| `notas` | `EJEMPLO – verificar` | Comentarios libres; aquí marca que el dato es ilustrativo. |
+
+Leída en lenguaje natural: *East of Eden*, de Steinbeck, cita (con certeza alta) a Génesis 4,7 mediante la palabra "timshel", ligada al motivo de que el pecado acecha a Caín.
+
 ## Modelo híbrido
 
 1. Capa principal: tablas CSV ([data/obras.csv](data/obras.csv), [data/relaciones.csv](data/relaciones.csv)), editables en LibreOffice o Excel.
