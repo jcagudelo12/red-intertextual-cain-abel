@@ -166,6 +166,24 @@ Ver el paso a paso en [docs/manual-anotacion.md](docs/manual-anotacion.md). Resu
 3. Vacía [obras.csv](data/obras.csv) y [relaciones.csv](data/relaciones.csv) y anota el nuevo corpus siguiendo [docs/metodologia.md](docs/metodologia.md).
 4. Ajusta las localizaciones (`loc_destino`) al sistema de citación de la nueva fuente.
 
+## Glosario
+
+- **Arista:** relación dirigida entre dos obras; una fila de [relaciones.csv](data/relaciones.csv). Ver [Un ejemplo](#un-ejemplo).
+- **Betweenness (intermediación):** medida de cuántos caminos entre otras obras pasan por una obra dada. Una obra con valor alto actúa de puente entre tradiciones; se calcula en [construir_grafo.py](scripts/construir_grafo.py) y aparece en el informe.
+- **Certeza:** confianza del anotador en una relación (`alta`, `media` o `baja`). Ver [docs/manual-anotacion.md](docs/manual-anotacion.md).
+- **CiTO:** ontología (Citation Typing Ontology) que clasifica por qué un texto académico cita a otro. Se usa para los tipos de relación académicos en [tipos_relacion.csv](data/vocabularios/tipos_relacion.csv).
+- **Comunidad / Louvain:** grupo de obras muy conectadas entre sí. Louvain es el algoritmo que las detecta; aquí se usa con semilla fija (`seed=42`) para que el resultado sea replicable.
+- **GEXF / GraphML:** formatos de archivo de grafos. GEXF se abre en Gephi y GraphML en otros programas de análisis de redes; ambos se generan en `salidas/`.
+- **Hipertextualidad:** según Genette, relación en que un texto transforma o imita a otro (reescritura, parodia). Ver [metodologia.md](docs/metodologia.md).
+- **Metatextualidad:** según Genette, relación en que un texto comenta a otro (exégesis, crítica).
+- **Motivo:** tema o episodio recurrente del relato (por ejemplo, "el pecado acecha"), con id propio en [motivos.csv](data/vocabularios/motivos.csv).
+- **Nodo:** una obra del grafo; una fila de [obras.csv](data/obras.csv).
+- **ODD:** "One Document Does it all", formato de TEI para definir qué etiquetas se permiten. Aquí, [red-intertextual.odd.xml](tei/odd/red-intertextual.odd.xml).
+- **OSIS:** sistema de identificadores bíblicos (`Gen.4.7` es Génesis 4,7); se usa en `loc_destino`.
+- **Standoff (anotación externa):** anotar sin modificar el texto original, guardando las anotaciones aparte y apuntando a él. En este proyecto, las relaciones viven en los CSV y no dentro del texto.
+- **TEI:** estándar de marcado en XML para textos de humanidades. Aquí es una capa opcional para textos de dominio público; ver [tei/README.md](tei/README.md).
+- **Vocabulario controlado:** lista cerrada de valores admitidos para una columna, para anotar de forma consistente. Ver [data/vocabularios/](data/vocabularios/).
+
 ## Pendiente
 
 - **Licencia:** sugerencia de CC BY 4.0 para los datos y MIT para el código. No se ha creado ningún archivo LICENSE.
