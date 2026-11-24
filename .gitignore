@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+salidas/*
+!salidas/.gitkeep
+.DS_Store
+*.pyc
+.pytest_cache/

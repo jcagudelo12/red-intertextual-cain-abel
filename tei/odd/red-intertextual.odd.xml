@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="es">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt><title>ODD mínimo: Red intertextual Caín y Abel</title></titleStmt>
+      <publicationStmt><p>Uso interno del proyecto.</p></publicationStmt>
+      <sourceDesc><p>Documento nativo, no derivado de otra fuente.</p></sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <!--
+        Para generar el esquema RelaxNG: subir este archivo a TEI Roma (https://roma.tei-c.org)
+        o procesarlo con TEIGarage (https://teigarage.tei-c.org) convirtiendo de ODD a RelaxNG.
+        Luego asociar el .rng resultante a los textos con xml-model en cada archivo XML.
+      -->
+      <schemaSpec ident="red-intertextual" start="TEI">
+        <moduleRef key="tei"/>
+        <moduleRef key="core"/>
+        <moduleRef key="header"/>
+        <moduleRef key="textstructure"/>
+        <moduleRef key="linking"/>
+        <moduleRef key="namesdates"/>
+        <moduleRef key="analysis"/>
+        <!-- Restringe @type de link a los tipos de relación literarios de tipos_relacion.csv -->
+        <elementSpec ident="link" mode="change">
+          <attList>
+            <attDef ident="type" mode="change" usage="req">
+              <valList type="closed" mode="replace">
+                <valItem ident="cita"/>
+                <valItem ident="parafrasis"/>
+                <valItem ident="alusion"/>
+                <valItem ident="mencion"/>
+                <valItem ident="reescritura"/>
+                <valItem ident="inversion_parodia"/>
+                <valItem ident="comentario_exegesis"/>
+                <valItem ident="version_paralela"/>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>

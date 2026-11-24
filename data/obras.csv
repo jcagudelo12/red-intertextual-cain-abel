@@ -1,0 +1,12 @@
+id,tipo_obra,titulo,autor,anio,lengua,referencia_edicion,zotero_key,derechos,capa_tei,notas
+genesis-4,fuente_biblica,Génesis 4 (Caín y Abel),,,hbo,Gn 4 1-16; texto en tei/textos/genesis-4.xml (RV 1909),,dominio_publico,si,EJEMPLO – verificar. Texto fuente del grafo
+hebreos-11,texto_biblico,Carta a los Hebreos 11,Anónimo,80,grc,Heb 11 4,,dominio_publico,no,EJEMPLO – verificar. Datación aproximada
+coran-5,texto_religioso,Corán sura 5 (La mesa servida),,632,ara,Sura 5 27-32,,dominio_publico,no,EJEMPLO – verificar. Datación aproximada
+filon-sacrificiis,exegesis_comentario,De sacrificiis Abelis et Caini,Filón de Alejandría,40,grc,,,dominio_publico,no,EJEMPLO – verificar. Datación aproximada
+agustin-civitate-xv,patristica,De civitate Dei libro XV,Agustín de Hipona,426,lat,,,dominio_publico,no,EJEMPLO – verificar. Fecha aproximada
+byron-cain-1821,literatura_teatro,Cain: A Mystery,George Gordon Byron,1821,eng,,,dominio_publico,no,EJEMPLO – verificar
+baudelaire-abel-cain-1857,literatura_poesia,Abel et Caïn (Les Fleurs du mal),Charles Baudelaire,1857,fra,,,dominio_publico,no,EJEMPLO – verificar
+unamuno-abel-sanchez-1917,literatura_narrativa,Abel Sánchez,Miguel de Unamuno,1917,spa,,,dominio_publico,no,EJEMPLO – verificar. Comprobar estado de dominio público en cada país
+steinbeck-east-of-eden-1952,literatura_narrativa,East of Eden,John Steinbeck,1952,eng,,,con_derechos,no,EJEMPLO – verificar
+saramago-caim-2009,literatura_narrativa,Caim,José Saramago,2009,por,,,con_derechos,no,EJEMPLO – verificar
+plantilla-articulo,articulo_academico,PLANTILLA – reemplazar por artículo real,,,,,,desconocido,no,PLANTILLA para mostrar el formato; no es un artículo real

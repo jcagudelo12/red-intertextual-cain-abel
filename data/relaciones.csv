@@ -1,0 +1,12 @@
+id,origen,destino,tipo_relacion,loc_origen,loc_destino,evidencia,motivos,certeza,mediada_por,anotador,fecha,notas
+r0001,hebreos-11,genesis-4,comentario_exegesis,Heb 11 4,Gen.4.4,Presenta a Abel como ejemplo de fe y ofrenda mejor,m_abel_martir,alta,,anotadorA,2026-11-24,EJEMPLO – verificar
+r0002,coran-5,genesis-4,version_paralela,Sura 5 27-32,Gen.4.8,Relato de los dos hijos de Adán con episodio del cuervo,m_cuervo_entierro;m_fratricidio,media,,anotadorA,2026-11-24,EJEMPLO – verificar. La relación histórica con Génesis es debatida
+r0003,filon-sacrificiis,genesis-4,comentario_exegesis,,Gen.4.1-4,Lectura alegórica de las figuras de Caín y Abel,,media,,anotadorA,2026-11-24,EJEMPLO – verificar
+r0004,agustin-civitate-xv,genesis-4,comentario_exegesis,XV,Gen.4.17,Caín como fundador de la ciudad terrena frente a Abel,m_fundacion_ciudad,alta,,anotadorA,2026-11-24,EJEMPLO – verificar
+r0005,byron-cain-1821,genesis-4,reescritura,,,Drama que reelabora el relato con un Caín rebelde,m_rehabilitacion_cain,alta,,anotadorA,2026-11-24,EJEMPLO – verificar
+r0006,baudelaire-abel-cain-1857,genesis-4,inversion_parodia,,,Invierte la condena: la raza de Caín asciende al cielo,m_linaje_maldito,media,,anotadorA,2026-11-24,EJEMPLO – verificar
+r0007,baudelaire-abel-cain-1857,byron-cain-1821,alusion,,,Posible eco de la figura rebelde de Caín,m_rehabilitacion_cain,baja,,anotadorA,2026-11-24,Hipótesis a verificar
+r0008,unamuno-abel-sanchez-1917,genesis-4,reescritura,,,Novela sobre la envidia entre dos amigos como hermanos,m_envidia,alta,,anotadorA,2026-11-24,EJEMPLO – verificar
+r0009,steinbeck-east-of-eden-1952,genesis-4,cita,,Gen.4.7,timshel,m_pecado_acecha,alta,,anotadorA,2026-11-24,EJEMPLO – verificar
+r0010,saramago-caim-2009,genesis-4,inversion_parodia,,,Cuestiona la justicia divina desde la perspectiva de Caín,m_rehabilitacion_cain,media,,anotadorA,2026-11-24,EJEMPLO – verificar
+r0011,plantilla-articulo,byron-cain-1821,interpreta,p. 1,,Fila de ejemplo del formato,m_rehabilitacion_cain,baja,,anotadorA,2026-11-24,PLANTILLA

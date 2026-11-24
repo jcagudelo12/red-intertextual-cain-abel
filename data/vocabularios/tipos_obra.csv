@@ -1,0 +1,13 @@
+id,etiqueta,descripcion
+fuente_biblica,Fuente bíblica,Pasaje bíblico que funciona como texto fuente del grafo (Génesis 4)
+texto_biblico,Texto bíblico,Otro texto bíblico que retoma el relato
+texto_religioso,Texto religioso,Texto de otra tradición religiosa (Corán o midrash)
+exegesis_comentario,Exégesis o comentario,Obra de interpretación del texto bíblico (comentario o exégesis antigua o moderna)
+patristica,Patrística,Obra de los Padres de la Iglesia
+literatura_narrativa,Literatura narrativa,Novela o relato
+literatura_poesia,Literatura poética,Poema o poemario
+literatura_teatro,Literatura teatral,Obra dramática
+filosofia,Filosofía,Obra filosófica
+articulo_academico,Artículo académico,Artículo de revista o capítulo de volumen colectivo
+libro_academico,Libro académico,Monografía académica
+otro,Otro,Texto que no encaja en las categorías anteriores

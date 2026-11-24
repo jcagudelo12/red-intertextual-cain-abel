@@ -1,0 +1,17 @@
+id,etiqueta,familia,cito,genette,descripcion
+cita,Cita,literaria,cito:quotes,intertextualidad,Reproducción literal y reconocible de un fragmento del texto destino
+parafrasis,Paráfrasis,literaria,,intertextualidad,Reformulación cercana del contenido del pasaje con coincidencia léxica parcial
+alusion,Alusión,literaria,,intertextualidad,Referencia indirecta que exige reconocer el texto destino sin citarlo
+mencion,Mención,literaria,cito:citesForInformation,intertextualidad,Nombra explícitamente al personaje o al relato sin desarrollarlo
+reescritura,Reescritura,literaria,cito:extends,hipertextualidad,Transformación del relato entero en una obra nueva que lo continúa o lo reelabora
+inversion_parodia,Inversión o parodia,literaria,cito:parodies,hipertextualidad,Transformación que invierte los valores del relato o lo imita con distancia crítica o burlesca
+comentario_exegesis,Comentario o exégesis,literaria,cito:discusses,metatextualidad,Texto que explica o interpreta el relato comentándolo
+version_paralela,Versión paralela,literaria,cito:citesAsRelated,intertextualidad,Relato de la misma tradición en otro texto sin dependencia directa demostrada
+cita_academica,Cita académica,academica,cito:cites,,Cita bibliográfica formal sin valoración
+discute,Discute,academica,cito:discusses,,Analiza o debate ampliamente el texto destino
+critica,Critica,academica,cito:critiques,,Valora críticamente el texto destino
+apoya,Apoya,academica,cito:agreesWith,,Respalda las tesis del texto destino
+refuta,Refuta,academica,cito:disagreesWith,,Rechaza las tesis del texto destino
+extiende,Extiende,academica,cito:extends,,Amplía o desarrolla el trabajo del texto destino
+usa_como_fuente,Usa como fuente,academica,cito:obtainsSupportFrom,,Se apoya en el texto destino como fuente de datos o argumentos
+interpreta,Interpreta,academica,cito:discusses,,Ofrece una lectura interpretativa del texto destino

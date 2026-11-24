@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="genesis-4" xml:lang="es">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Génesis 4,1-16 (Caín y Abel), Reina-Valera 1909</title>
+        <respStmt><resp>Transcripción</resp><name>Proyecto Red intertextual Caín y Abel</name></respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Texto en dominio público. Uso interno del proyecto.</p>
+      </publicationStmt>
+      <notesStmt>
+        <note>Verificar contra edición de referencia: el texto se transcribió de memoria y puede contener erratas ortográficas o de puntuación.</note>
+      </notesStmt>
+      <sourceDesc>
+        <bibl>Santa Biblia, versión Reina-Valera, revisión de 1909.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="es">Español (ortografía de 1909)</language></langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="book" n="Gen">
+        <div type="chapter" n="4">
+          <ab xml:id="Gen.4.1" n="1">Y conoció Adán á su mujer Eva, la cual concibió y parió á Caín, y dijo: Adquirido he varón por Jehová.</ab>
+          <ab xml:id="Gen.4.2" n="2">Y después parió á su hermano Abel. Y fué Abel pastor de ovejas, y Caín fué labrador de la tierra.</ab>
+          <ab xml:id="Gen.4.3" n="3">Y aconteció andando el tiempo, que Caín trajo del fruto de la tierra una ofrenda á Jehová.</ab>
+          <ab xml:id="Gen.4.4" n="4">Y Abel trajo también de los primogénitos de sus ovejas, y de su grosura. Y miró Jehová con agrado á Abel y á su ofrenda;</ab>
+          <ab xml:id="Gen.4.5" n="5">Mas no miró propicio á Caín y á la ofrenda suya. Y ensañóse Caín en gran manera, y decayó su semblante.</ab>
+          <ab xml:id="Gen.4.6" n="6">Entonces Jehová dijo á Caín: ¿Por qué te has ensañado, y por qué se ha inmutado tu rostro?</ab>
+          <ab xml:id="Gen.4.7" n="7">Si bien hicieres, ¿no serás ensalzado? y si no hicieres bien, el pecado está á la puerta: con todo esto, á ti será su deseo, y tú te enseñorearás de él.</ab>
+          <ab xml:id="Gen.4.8" n="8">Y dijo Caín á su hermano Abel: Salgamos al campo. Y aconteció que estando ellos en el campo, Caín se levantó contra su hermano Abel, y le mató.</ab>
+          <ab xml:id="Gen.4.9" n="9">Y Jehová dijo á Caín: ¿Dónde está Abel tu hermano? Y él respondió: No sé: ¿soy yo guarda de mi hermano?</ab>
+          <ab xml:id="Gen.4.10" n="10">Y él le dijo: ¿Qué has hecho? La voz de la sangre de tu hermano clama á mí desde la tierra.</ab>
+          <ab xml:id="Gen.4.11" n="11">Ahora pues, maldito seas tú de la tierra, que abrió su boca para recibir la sangre de tu hermano de tu mano:</ab>
+          <ab xml:id="Gen.4.12" n="12">Cuando labrares la tierra, no te volverá á dar su fuerza: errante y extranjero serás en la tierra.</ab>
+          <ab xml:id="Gen.4.13" n="13">Y dijo Caín á Jehová: Mayor es mi maldad que para ser perdonada.</ab>
+          <ab xml:id="Gen.4.14" n="14">He aquí me echas hoy de la faz de la tierra, y de tu presencia me esconderé: y seré errante y extranjero en la tierra, y será que cualquiera que me hallare, me matará.</ab>
+          <ab xml:id="Gen.4.15" n="15">Y le respondió Jehová: Cierto que cualquiera que matare á Caín, siete veces será castigado. Entonces Jehová puso señal en Caín, para que no lo matase cualquiera que le hallare.</ab>
+          <ab xml:id="Gen.4.16" n="16">Y salió Caín de delante de Jehová, y habitó en tierra de Nod, al oriente de Edén.</ab>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

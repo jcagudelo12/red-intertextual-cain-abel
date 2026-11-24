@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  PLANTILLA de texto anotado. Copiar, renombrar (el nombre de archivo debería coincidir
+  con el id de la obra en data/obras.csv) y sustituir los datos de ejemplo.
+  El atributo xml:id de <TEI> es el id de la obra de origen en obras.csv.
+  El id "plantilla-tei" no existe en obras.csv: construir_grafo.py ignora con aviso sus relaciones.
+  Solo para textos de dominio público.
+-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="plantilla-tei" xml:lang="es">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>PLANTILLA - reemplazar por el título de la obra</title>
+        <author>Autor de la obra</author>
+      </titleStmt>
+      <publicationStmt><p>Texto en dominio público. Verificar derechos antes de transcribir.</p></publicationStmt>
+      <sourceDesc>
+        <!-- Edición de la que se transcribe -->
+        <bibl>Referencia completa de la edición utilizada.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage><language ident="es">Español</language></langUsage>
+      <!-- Anotadores: su id se referencia en @resp de los link -->
+      <particDesc>
+        <listPerson>
+          <person xml:id="anotadorA"><persName>Anotador A</persName></person>
+        </listPerson>
+      </particDesc>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="chapter" n="1">
+        <p>
+          <!-- seg: pasaje que retoma al relato. @ana lista ids de motivos.csv con prefijo # -->
+          <seg xml:id="seg_1" ana="#m_sangre_clama">Fragmento breve del texto que retoma el motivo de la sangre que clama.</seg>
+          <!-- persName: mención de personaje; @ref apunta al id de personajes.csv -->
+          <persName ref="#cain">Caín</persName>
+          <!-- rs: referencia genérica a una persona sin nombre propio -->
+          <rs type="person" ref="#abel">su hermano</rs>
+        </p>
+        <!-- cit: cita explícita con su fuente -->
+        <cit>
+          <quote>Cita literal breve</quote>
+          <bibl>Fuente de la cita</bibl>
+        </cit>
+      </div>
+    </body>
+    <back>
+      <!-- target: primero el seg de origen, después archivo#versículo OSIS de destino.
+           type: id de tipos_relacion.csv (tipos literarios). cert: high|medium|low. resp: anotador -->
+      <linkGrp type="intertextual">
+        <link type="reescritura" target="#seg_1 genesis-4.xml#Gen.4.10" cert="high" resp="#anotadorA"/>
+      </linkGrp>
+    </back>
+  </text>
+</TEI>
