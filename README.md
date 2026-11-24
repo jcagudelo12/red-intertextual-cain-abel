@@ -1,6 +1,13 @@
 # Red intertextual Caín y Abel
 
-Grafo de relaciones entre textos que retoman, citan, comentan o transforman el relato de Caín y Abel (Génesis 4,1-16), y método replicable de anotación. El corpus es heterogéneo: textos bíblicos, religiosos (Corán, midrash), patrística, literatura, filosofía y estudios académicos.
+Este proyecto reúne, en un mapa de conexiones, los textos que retoman, citan, comentan o transforman el relato de Caín y Abel (Génesis 4,1-16). Cada texto es un punto y cada relación entre dos textos (una cita, una reescritura, una crítica) es una línea que los une. El corpus es heterogéneo: textos bíblicos, religiosos (Corán, midrash), patrística, literatura, filosofía y estudios académicos.
+
+Forma parte de una tesis doctoral en filosofía. La pregunta de investigación, **provisional**, es: *¿Cómo circula y se transforma el relato de Caín y Abel en la tradición textual (religiosa, literaria, filosófica y académica) y qué textos funcionan como puentes entre tradiciones?*
+
+El proyecto produce dos cosas:
+
+- **Un grafo** de relaciones intertextuales, que se puede explorar en el navegador o analizar en Gephi.
+- **Un método replicable** de anotación (tablas, vocabularios controlados y validación automática) que sirve también para otros relatos.
 
 > **Advertencia:** los datos semilla (obras y relaciones) son **ilustrativos** y están marcados "EJEMPLO – verificar". No son resultados de investigación. La obra `plantilla-articulo` solo muestra el formato.
 
@@ -32,7 +39,7 @@ Enlaces rápidos:
 - [tei/](tei/): [README.md](tei/README.md), [ODD](tei/odd/red-intertextual.odd.xml) y textos ([genesis-4.xml](tei/textos/genesis-4.xml), [plantilla.xml](tei/textos/plantilla.xml)).
 - [scripts/](scripts/): [validar.py](scripts/validar.py), [construir_grafo.py](scripts/construir_grafo.py), [tei_a_relaciones.py](scripts/tei_a_relaciones.py).
 - [tests/](tests/): [test_validar.py](tests/test_validar.py).
-- [salidas/](salidas/): resultados generados.
+- `salidas/`: resultados generados.
 - [requirements.txt](requirements.txt) y el flujo de CI en [.github/workflows/validar.yml](.github/workflows/validar.yml).
 
 ## Instalación
