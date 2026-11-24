@@ -70,6 +70,34 @@ Leída en lenguaje natural: *East of Eden*, de Steinbeck, cita (con certeza alta
 
 Más detalle en [docs/decisiones-modelo.md](docs/decisiones-modelo.md).
 
+## Tecnologías y metodologías
+
+### Tecnologías
+
+| Tecnología | Para qué se usa aquí | ¿Hace falta para anotar? |
+|---|---|---|
+| [Python 3](https://www.python.org/) | Ejecuta los scripts de validación, construcción del grafo y extracción de TEI. | No |
+| [networkx](https://networkx.org/) | Construye el grafo y calcula métricas (betweenness, comunidades Louvain). | No |
+| [lxml](https://lxml.de/) | Lee los archivos TEI XML y extrae sus enlaces. | No |
+| [pytest](https://pytest.org/) | Pruebas automáticas del validador. | No |
+| CSV + [LibreOffice Calc](https://www.libreoffice.org/) | Edición de las tablas de obras y relaciones. | Sí |
+| [TEI P5](https://tei-c.org/) + ODD ([TEI Roma](https://roma.tei-c.org/)) | Marcado opcional de textos de dominio público y esquema que lo define. | No |
+| [Gephi](https://gephi.org/) | Exploración y visualización del grafo a partir del archivo GEXF. | No |
+| [vis-network](https://visjs.org/) | Visualización interactiva en el navegador (`grafo.html`). | No |
+| [GitHub Actions](https://docs.github.com/actions) | Ejecuta validación y pruebas en cada cambio. | No |
+| [Zotero](https://www.zotero.org/) | Gestión bibliográfica; la clave de Zotero se registra en `obras.csv` (`zotero_key`). | No (recomendado) |
+
+### Metodologías y marcos
+
+| Metodología | Para qué | Referencia | Estado en el repo |
+|---|---|---|---|
+| Transtextualidad (Genette) | Base de los tipos de relación literarios (intertextualidad, hipertextualidad, metatextualidad). | Gérard Genette, *Palimpsestos* (1982) | Implementada: [tipos_relacion.csv](data/vocabularios/tipos_relacion.csv) |
+| CiTO | Tipos de relación para citas académicas. | [CiTO](https://sparontologies.github.io/cito/current/cito.html) | Implementada: columna `cito` del mismo vocabulario |
+| Análisis de redes | Centralidad, betweenness (obras puente) y comunidades Louvain. | networkx | Implementada en [construir_grafo.py](scripts/construir_grafo.py) (informe) |
+| Acuerdo entre anotadores | Medir la fiabilidad de la anotación. | Kappa de Cohen / alfa de Krippendorff | Recomendada, no automatizada (descrita en [metodologia.md](docs/metodologia.md)) |
+| Lingüística de corpus | Concordancias KWIC, colocaciones y keyness para localizar pasajes y términos. | [AntConc](https://www.laurenceanthony.net/software/antconc/) | Recomendada, no automatizada |
+| Detección de reutilización textual | Encontrar pasajes compartidos entre textos. | [Passim](https://github.com/dasmiq/passim) | Recomendada, no automatizada |
+
 ## Estructura
 
 ```
