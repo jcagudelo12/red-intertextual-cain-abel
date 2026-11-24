@@ -6,13 +6,13 @@ Grafo de relaciones entre textos que retoman, citan, comentan o transforman el r
 
 ## Modelo híbrido
 
-1. Capa principal: tablas CSV (`data/obras.csv`, `data/relaciones.csv`), editables en LibreOffice o Excel.
-2. Vocabularios controlados (`data/vocabularios/`) y validación por script.
+1. Capa principal: tablas CSV ([data/obras.csv](data/obras.csv), [data/relaciones.csv](data/relaciones.csv)), editables en LibreOffice o Excel.
+2. Vocabularios controlados ([data/vocabularios/](data/vocabularios/)) y validación por script.
 3. Cada relación lleva evidencia breve (localización y fragmento) para no guardar textos con derechos.
 4. Capa opcional TEI XML, solo para textos de dominio público que requieran lectura cercana; un script extrae sus `<link>` al mismo formato.
 5. Tipos de relación basados en Genette (literarias) y CiTO (académicas), con columna de mapeo.
 
-Más detalle en `docs/decisiones-modelo.md`.
+Más detalle en [docs/decisiones-modelo.md](docs/decisiones-modelo.md).
 
 ## Estructura
 
@@ -25,30 +25,61 @@ tests/           pruebas con pytest
 salidas/         resultados generados (ignorados por git)
 ```
 
+Enlaces rápidos:
+
+- [data/](data/): [obras.csv](data/obras.csv), [relaciones.csv](data/relaciones.csv) y [vocabularios/](data/vocabularios/) ([motivos.csv](data/vocabularios/motivos.csv), [personajes.csv](data/vocabularios/personajes.csv), [tipos_obra.csv](data/vocabularios/tipos_obra.csv), [tipos_relacion.csv](data/vocabularios/tipos_relacion.csv)).
+- [docs/](docs/): [metodologia.md](docs/metodologia.md), [manual-anotacion.md](docs/manual-anotacion.md), [decisiones-modelo.md](docs/decisiones-modelo.md).
+- [tei/](tei/): [README.md](tei/README.md), [ODD](tei/odd/red-intertextual.odd.xml) y textos ([genesis-4.xml](tei/textos/genesis-4.xml), [plantilla.xml](tei/textos/plantilla.xml)).
+- [scripts/](scripts/): [validar.py](scripts/validar.py), [construir_grafo.py](scripts/construir_grafo.py), [tei_a_relaciones.py](scripts/tei_a_relaciones.py).
+- [tests/](tests/): [test_validar.py](tests/test_validar.py).
+- [salidas/](salidas/): resultados generados.
+- [requirements.txt](requirements.txt) y el flujo de CI en [.github/workflows/validar.yml](.github/workflows/validar.yml).
+
 ## Instalación
 
-```
-python -m venv .venv
+Dependencias en [requirements.txt](requirements.txt).
+
+```bash
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+En Debian/Ubuntu el comando `python` puede no existir (solo `python3`); dentro del entorno virtual activado sí está disponible `python`. Si prefieres no activar el entorno, llama directamente a su intérprete:
+
+```bash
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python scripts/validar.py
+```
+
 ## Flujo de trabajo
 
-1. Editar los CSV de `data/`.
-2. `python scripts/validar.py`
-3. `python scripts/construir_grafo.py` (opciones: `--min-certeza {baja,media,alta}`, `--incluir-motivos`, `--incluir-tei`)
-4. Abrir `salidas/grafo.html` en el navegador (carga vis-network desde CDN) o `salidas/grafo.gexf` en Gephi. También se generan `grafo.graphml`, `nodos.csv`, `aristas.csv` e `informe.md`.
+1. Editar los CSV de [data/](data/).
+2. Validar:
+
+   ```bash
+   python scripts/validar.py
+   ```
+
+3. Construir el grafo (opciones: `--min-certeza {baja,media,alta}`, `--incluir-motivos`, `--incluir-tei`):
+
+   ```bash
+   python scripts/construir_grafo.py
+   ```
+
+4. Abrir `salidas/grafo.html` en el navegador (carga vis-network desde CDN) o `salidas/grafo.gexf` en Gephi. También se generan `salidas/grafo.graphml`, `salidas/nodos.csv`, `salidas/aristas.csv` y `salidas/informe.md`. Estos archivos se crean en tu copia local al ejecutar el paso 3 y no se suben a GitHub (están ignorados por git).
+
+Con `.venv/bin/python` en lugar de `python` los comandos funcionan sin activar el entorno. Las pruebas se ejecutan con `python -m pytest`.
 
 ## Añadir una obra o una relación
 
-Ver el paso a paso en `docs/manual-anotacion.md`. Resumen: añade la fila en `obras.csv` o `relaciones.csv` con ids válidos, motivos de `motivos.csv` y evidencia breve, y ejecuta el validador.
+Ver el paso a paso en [docs/manual-anotacion.md](docs/manual-anotacion.md). Resumen: añade la fila en [obras.csv](data/obras.csv) o [relaciones.csv](data/relaciones.csv) con ids válidos, motivos de [motivos.csv](data/vocabularios/motivos.csv) y evidencia breve, y ejecuta el validador.
 
 ## Replicar el método con otro relato
 
-1. Sustituye `data/vocabularios/motivos.csv` y `personajes.csv` por los del nuevo relato.
-2. Cambia la fuente: nueva fila en `obras.csv` (tipo `fuente_biblica` u otro) y, si procede, su TEI en `tei/textos/`.
-3. Vacía `obras.csv` y `relaciones.csv` y anota el nuevo corpus siguiendo `docs/metodologia.md`.
+1. Sustituye [data/vocabularios/motivos.csv](data/vocabularios/motivos.csv) y [personajes.csv](data/vocabularios/personajes.csv) por los del nuevo relato.
+2. Cambia la fuente: nueva fila en [obras.csv](data/obras.csv) (tipo `fuente_biblica` u otro) y, si procede, su TEI en [tei/textos/](tei/textos/).
+3. Vacía [obras.csv](data/obras.csv) y [relaciones.csv](data/relaciones.csv) y anota el nuevo corpus siguiendo [docs/metodologia.md](docs/metodologia.md).
 4. Ajusta las localizaciones (`loc_destino`) al sistema de citación de la nueva fuente.
 
 ## Pendiente
